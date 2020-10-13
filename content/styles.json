@@ -1,7 +1,7 @@
 {
   "logo": "logo_ipsum.png",
-  "siteName": "Alpaca",
-  "description": "Docs starter with next.js and TinaCMS",
+  "siteName": "lilikoi landing pages",
+  "description": "A landing page template for lilikoi agency clients",
   "fonts": {
     "body": "Roboto, system-ui, sans-serif",
     "heading": "Roboto, system-ui, sans-serif",
@@ -19,11 +19,11 @@
   "colors": {
     "text": "#333333",
     "background": "#ffffff",
-    "primary": "#1A73E8",
-    "secondary": "#5FAEA0",
+    "primary": "#5C2E76",
+    "secondary": "#F6D4A2",
     "muted": "#F6F6F6",
-    "highlight": "#eef6ff",
-    "highlightBorder": "#cce3fe",
+    "highlight": "#EEE3FF",
+    "highlightBorder": "#E9D9F8",
     "gray": "#777777",
     "accent": "#660099"
   }
