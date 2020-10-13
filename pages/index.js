@@ -11,6 +11,35 @@ import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
+const Page = ({ file, preview, styleFile }) => {
+  // can remove this if you want to use the index page
+  const formOptions = {
+    label: "home page",
+    fields: [
+      {
+        name: "title",
+        component: "text",
+      },
+    ],
+  }
+  const [data, form] = useGithubJsonForm(file, formOptions)
+  usePlugin(form)
+
+  const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
+
+  return (
+    <Layout form={form} theme={styleData}>
+      <Head title="Home" />
+      <Container className="container">
+        <Title className="title">{data.title}</Title>
+        <p className="description">
+          To get started, edit <code>pages/index.js</code> and save to reload.
+        </p>
+      </Container>
+    </Layout>
+  )
+}
+
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.primary};
