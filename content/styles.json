@@ -3,7 +3,7 @@
   "siteName": "lilikoi landing pages",
   "description": "A landing page template for lilikoi agency clients",
   "fonts": {
-    "body": "Roboto, system-ui, sans-serif",
+    "body": "Mulish, system-ui, sans-serif",
     "heading": "Roboto, system-ui, sans-serif",
     "monospace": "Roboto Mono, monospace"
   },
