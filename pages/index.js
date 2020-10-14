@@ -1,17 +1,17 @@
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm } from "react-tinacms-github"
-
+import { usePlugin } from "tinacms"
 import Head from "@components/head"
 import Layout from "@components/layout"
 import Container from "@components/container"
-import { usePlugin } from "tinacms"
+
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
   const formOptions = {
-    label: "home page",
+    label: "Home Page",
     fields: [
       {
         name: "title",

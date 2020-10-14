@@ -35,7 +35,7 @@
     "next": "^9.5.2",
     "next-svgr": "^0.0.2",
     "next-tinacms-github": "^0.31.0-alpha.5",
-    "next-tinacms-json": "^0.31.0-alpha.5",
+    "next-tinacms-json": "^0.31.0",
     "next-tinacms-markdown": "^0.31.0-alpha.5",
     "node-sass": "^4.13.1",
     "raw-loader": "^4.0.0",
