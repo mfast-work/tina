@@ -9,6 +9,7 @@ import { NextGithubMediaStore } from "next-tinacms-github"
 // eslint-disable-next-line no-undef
 require("typeface-source-code-pro")
 import "./app.css"
+import "../styles/tailwind.css"
 
 class MyApp extends App {
   constructor(props) {

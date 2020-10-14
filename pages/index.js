@@ -1,8 +1,6 @@
-import { useEffect } from "react"
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm } from "react-tinacms-github"
-import Router from "next/router"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
@@ -12,7 +10,6 @@ import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
-  // can remove this if you want to use the index page
   const formOptions = {
     label: "home page",
     fields: [
@@ -35,6 +32,18 @@ const Page = ({ file, preview, styleFile }) => {
         <p className="description">
           To get started, edit <code>pages/index.js</code> and save to reload.
         </p>
+        <div className="md:flex bg-white rounded-lg p-24 justify-center">
+          <img
+            className="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6"
+            src="/LIK-Logo-Files-(Color).png"
+          />
+          <div className="text-center md:text-left">
+            <h2 className="text-lg">Jake Prins</h2>
+            <div className="text-purple-500">JavaScript developer</div>
+            <div className="text-gray-600">Twitter: @jakeprins_nl</div>
+            <div className="text-gray-600">www.jakeprins.com</div>
+          </div>
+        </div>
       </Container>
     </Layout>
   )
