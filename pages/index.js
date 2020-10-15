@@ -1,13 +1,14 @@
 //import { useEffect } from "react"
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-import { useGithubJsonForm } from "react-tinacms-github"
 //import Router from "next/router"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
 import Container from "@components/container"
 import { usePlugin } from "tinacms"
+import { useGithubJsonForm } from "react-tinacms-github"
+
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
