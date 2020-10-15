@@ -14,10 +14,16 @@ import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
   const formOptions = {
-    label: "home page",
+    label: "Home Page",
     fields: [
       {
         name: "title",
+        label: "Heading",
+        component: "text",
+      },
+      {
+        name: "subheading",
+        label: "Subheading",
         component: "text",
       },
     ],
@@ -32,9 +38,7 @@ const Page = ({ file, preview, styleFile }) => {
       <Head title="Home" />
       <Container className="container">
         <Title className="title">{data.title}</Title>
-        <p className="description">
-          To get started, edit <code>pages/index.js</code> and save to reload.
-        </p>
+        <p className="description">{data.subheading}</p>
       </Container>
     </Layout>
   )
