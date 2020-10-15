@@ -14,8 +14,13 @@ import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
   const formOptions = {
-    label: "Home Page",
-    fields: [{ name: "title", component: "text" }],
+    label: "home page",
+    fields: [
+      {
+        name: "title",
+        component: "text",
+      },
+    ],
   }
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
