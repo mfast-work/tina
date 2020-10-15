@@ -1,17 +1,17 @@
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm } from "react-tinacms-github"
-import { usePlugin } from "tinacms"
+
 import Head from "@components/head"
 import Layout from "@components/layout"
 import Container from "@components/container"
-
+import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
   const formOptions = {
-    label: "Home Page",
+    label: "home page",
     fields: [
       {
         name: "title",
@@ -61,23 +61,12 @@ export const getStaticProps = async function ({ preview, previewData }) {
   const global = await getGlobalStaticProps(preview, previewData)
 
   if (preview) {
-    // get data from github
-    const file = (
-      await getGithubPreviewProps({
-        ...previewData,
-        fileRelativePath: "content/home.json",
-        parse: parseJson,
-      })
-    ).props
-
-    return {
-      props: {
-        ...file,
-        ...global,
-      },
-    }
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: "content/home.json",
+      parse: parseJson,
+    })
   }
-  // render from the file system.
   return {
     props: {
       sourceProvider: null,
@@ -87,7 +76,6 @@ export const getStaticProps = async function ({ preview, previewData }) {
         fileRelativePath: "content/home.json",
         data: (await import("../content/home.json")).default,
       },
-      ...global,
     },
   }
 }
