@@ -61,6 +61,7 @@ const Page = ({ file, preview, styleFile }) => {
             label: "Image",
             component: "image",
             parse: (media) => media.path,
+            previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
           },
           {
             name: "hero.imageBg",
