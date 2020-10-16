@@ -60,9 +60,7 @@ const Page = ({ file, preview, styleFile }) => {
             name: "hero.image",
             label: "Image",
             component: "image",
-            parse: (media) => `/static/${media.filename}`,
-            uploadDir: () => "/public/static/",
-            previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+            parse: (media) => media.path,
           },
           {
             name: "hero.imageBg",

@@ -22,9 +22,7 @@ export const featureRow = {
           label: "Background Image",
           description: "This overrides the background color if both are defined",
           component: "image",
-          parse: (media) => `/static/${media.filename}`,
-          uploadDir: () => "/public/static/",
-          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          parse: (media) => media.path,
         },
         {
           name: "fullWidth",
@@ -70,9 +68,7 @@ export const featureRow = {
           label: "Image",
           name: "image",
           component: "image",
-          parse: (media) => `/static/${media.filename}`,
-          uploadDir: () => "/public/static/",
-          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          parse: (media) => media.path,
         },
         {
           label: "Content Alignment",
@@ -115,9 +111,7 @@ export const headingRow = {
           label: "Background Image",
           description: "This overrides the background color if both are defined",
           component: "image",
-          parse: (media) => `/static/${media.filename}`,
-          uploadDir: () => "/public/static/",
-          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          parse: (media) => media.path,
         },
         {
           name: "fullWidth",
@@ -179,9 +173,7 @@ export const buttonRow = {
           label: "Background Image",
           description: "This overrides the background color if both are defined",
           component: "image",
-          parse: (media) => `/static/${media.filename}`,
-          uploadDir: () => "/public/static/",
-          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          parse: (media) => media.path,
         },
         {
           name: "fullWidth",
