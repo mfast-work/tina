@@ -1,14 +1,23 @@
 //import { useEffect } from "react"
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-//import Router from "next/router"
+import { HtmlFieldPlugin, MarkdownFieldPlugin } from "react-tinacms-editor"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
 import Container from "@components/container"
-import { usePlugin } from "tinacms"
+import { usePlugin, usePlugins } from "tinacms"
 import { useGithubJsonForm } from "react-tinacms-github"
-
+import { columnsRow } from "../tina/columns"
+import {
+  featureRow,
+  buttonRow,
+  headingRow,
+  imageRow,
+  videoRow,
+  formRow,
+  ctaRow,
+} from "../tina/blocks"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
 
@@ -17,19 +26,83 @@ const Page = ({ file, preview, styleFile }) => {
     label: "Home Page",
     fields: [
       {
-        name: "title",
-        label: "Heading",
-        component: "text",
+        label: "Hero",
+        name: "rawJson.hero",
+        description: "Settings for the hero of the page",
+        component: "group",
+        fields: [
+          {
+            name: "showHero",
+            component: "toggle",
+            label: "Show Hero?",
+          },
+          {
+            name: "hero.heading",
+            label: "Heading",
+            component: "text",
+          },
+          {
+            name: "hero.content",
+            label: "Hero Content",
+            component: "markdown",
+          },
+          {
+            name: "hero.cta",
+            label: "Button Text",
+            component: "text",
+          },
+          {
+            name: "hero.ctaTarget",
+            label: "Button Link",
+            component: "text",
+          },
+          {
+            name: "hero.image",
+            label: "Image",
+            component: "image",
+            parse: (media) => `/static/${media.filename}`,
+            uploadDir: () => "/public/static/",
+            previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          },
+          {
+            name: "hero.imageBg",
+            label: "Use image as background?",
+            component: "toggle",
+          },
+          {
+            name: "hero.contentAlign",
+            label: "Content Alignment",
+            component: "select",
+            options: ["Left", "Right", "Center"],
+          },
+          {
+            name: "hero.imageAlign",
+            label: "Image Alignment",
+            component: "select",
+            options: ["Left", "Right", "Top", "Bottom"],
+          },
+        ],
       },
       {
-        name: "subheading",
-        label: "Subheading",
-        component: "text",
+        label: "Page Sections",
+        name: "rawjson.sections",
+        component: "blocks",
+        templates: {
+          features: featureRow,
+          heading: headingRow,
+          button: buttonRow,
+          image: imageRow,
+          video: videoRow,
+          form: formRow,
+          columns: columnsRow,
+          "image-with-text": ctaRow,
+        },
       },
     ],
   }
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
+  usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
 
   const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
 

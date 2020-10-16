@@ -1,4 +1,14 @@
 {
-  "title": "Tina, you fat lard.",
-  "subheading": "Filler"
+  "hero": {
+    "showHero": true,
+    "heading": "Tina, you fat lard.",
+    "content": "Filler",
+    "cta": "Button Text",
+    "ctaTarget": "#",
+    "image": "",
+    "imageBg": true,
+    "contentAlign": "left",
+    "imgAlign": "right",
+    "bgColor": ""
+  }
 }
