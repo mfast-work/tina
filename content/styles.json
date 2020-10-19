@@ -5,7 +5,8 @@
   "fonts": {
     "body": "Mulish, system-ui, sans-serif",
     "heading": "Roboto, system-ui, sans-serif",
-    "monospace": "Roboto Mono, monospace"
+    "monospace": "Roboto Mono, monospace",
+    "head": "Mulish, system-ui, sans-serif"
   },
   "fontWeights": {
     "body": 400,
@@ -18,13 +19,52 @@
   },
   "colors": {
     "text": "#333333",
-    "background": "#ffffff",
-    "primary": "#5C2E76",
-    "secondary": "#F6D4A2",
+    "background": "#E7E7E7",
+    "primary": "#473155",
+    "secondary": "#F3E257",
     "muted": "#F6F6F6",
-    "highlight": "#EEE3FF",
-    "highlightBorder": "#E9D9F8",
+    "highlight": "#936BCF",
+    "highlightBorder": "#E7DEF7",
     "gray": "#777777",
     "accent": "#660099"
-  }
+  },
+  "header": {
+    "show": true,
+    "height": 15
+  },
+  "footer": {
+    "privacy": "#",
+    "cslb": "1234"
+  },
+  "navigation": {
+    "headingLinks": [
+      {
+        "label": "New Link",
+        "id": "76fs2n2jd",
+        "link": "About",
+        "linkTarget": "/about"
+      }
+    ],
+    "footerLinks": [
+      {
+        "link": "About",
+        "id": "bfxswgvkb",
+        "linkTarget": "/about"
+      }
+    ],
+    "socialLinks": [
+      {
+        "icon": "instagram",
+        "id": "pdqd5iovb",
+        "linkTarget": "instagram.com"
+      },
+      {
+        "icon": "twitter",
+        "id": "orjcg917t",
+        "linkTarget": "twitter.com"
+      }
+    ]
+  },
+  "gtm": "",
+  "fontsBody": "Mulish, system-ui, sans-serif"
 }
