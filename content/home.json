@@ -23,6 +23,17 @@
         "ctaTarget": "#",
         "image": "images/download.jpeg"
       }
-    }
+    },
+    "sections": [
+      {
+        "settings": {
+          "fullWidth": true,
+          "yPadding": 1,
+          "xPadding": 2
+        },
+        "features": "",
+        "_template": "features"
+      }
+    ]
   }
 }
