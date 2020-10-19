@@ -31,7 +31,15 @@
           "yPadding": 1,
           "xPadding": 2
         },
-        "features": "",
+        "features": [
+          {
+            "heading": "Feature 1",
+            "id": "u8mjkmhtg",
+            "description": "Lorem ipsum",
+            "image": "apple-touch-icon.png",
+            "alignment": "Center"
+          }
+        ],
         "_template": "features"
       }
     ]
