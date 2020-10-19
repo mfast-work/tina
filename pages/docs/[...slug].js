@@ -14,7 +14,6 @@ import PostFeedback from "@components/post-feedback"
 import SideNav from "@components/side-nav"
 import DocWrapper from "@components/doc-wrapper"
 import MarkdownWrapper from "@components/markdown-wrapper"
-import Toc from "@components/Toc"
 import {
   useCreateMainDoc,
   useFormEditDoc,
@@ -22,7 +21,6 @@ import {
   useNavigationForm,
   useGlobalStyleForm,
 } from "@hooks"
-import { createToc } from "@utils"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import { useLastEdited } from "../../hooks/useLastEdited"
 
@@ -124,9 +122,6 @@ export const getStaticProps = async function ({ preview, previewData, params }) 
         parse: parseJson,
       })
 
-      if (typeof window === "undefined") {
-        Alltocs = createToc(previewProps.props.file.data.markdownBody)
-      }
       return {
         props: {
           ...global,
