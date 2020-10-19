@@ -17,6 +17,8 @@ import {
   videoRow,
   formRow,
   ctaRow,
+  htmlRow,
+  contentRow,
 } from "../tina/blocks"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { useGlobalStyleForm } from "@hooks"
@@ -59,9 +61,7 @@ const Page = ({ file, preview, styleFile }) => {
           {
             name: "hero.image",
             label: "Image",
-            component: "image",
-            parse: (media) => media.path,
-            previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+            component: "text",
           },
           {
             name: "hero.imageBg",
@@ -84,17 +84,19 @@ const Page = ({ file, preview, styleFile }) => {
       },
       {
         label: "Page Sections",
-        name: "rawjson.sections",
+        name: "rawJson.sections",
         component: "blocks",
         templates: {
           features: featureRow,
           heading: headingRow,
+          content: contentRow,
           button: buttonRow,
           image: imageRow,
           video: videoRow,
           form: formRow,
           columns: columnsRow,
           "image-with-text": ctaRow,
+          html: htmlRow,
         },
       },
     ],

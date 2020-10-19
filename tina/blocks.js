@@ -21,8 +21,7 @@ export const featureRow = {
           name: "bgImage",
           label: "Background Image",
           description: "This overrides the background color if both are defined",
-          component: "image",
-          parse: (media) => media.path,
+          component: "text",
         },
         {
           name: "fullWidth",
@@ -67,8 +66,7 @@ export const featureRow = {
         {
           label: "Image",
           name: "image",
-          component: "image",
-          parse: (media) => media.path,
+          component: "text",
         },
         {
           label: "Content Alignment",
@@ -110,8 +108,7 @@ export const headingRow = {
           name: "bgImage",
           label: "Background Image",
           description: "This overrides the background color if both are defined",
-          component: "image",
-          parse: (media) => media.path,
+          component: "text",
         },
         {
           name: "fullWidth",
@@ -172,8 +169,7 @@ export const buttonRow = {
           name: "bgImage",
           label: "Background Image",
           description: "This overrides the background color if both are defined",
-          component: "image",
-          parse: (media) => media.path,
+          component: "text",
         },
         {
           name: "fullWidth",
@@ -216,10 +212,332 @@ export const buttonRow = {
   ],
 }
 
-export const imageRow = {}
+export const imageRow = {
+  label: "Image",
+  key: "image-row",
+  defualtItem: {
+    settings: "",
+  },
+  fields: [
+    {
+      label: "Row Settings",
+      name: "settings",
+      component: "group",
+      fields: [
+        {
+          name: "bgColor",
+          label: "Background Color",
+          component: "select",
+          options: ["primary", "secondary"],
+        },
+        {
+          name: "bgImage",
+          label: "Background Image",
+          description: "This overrides the background color if both are defined",
+          component: "text",
+        },
+        {
+          name: "fullWidth",
+          label: "Full width?",
+          component: "toggle",
+        },
+        {
+          name: "yPadding",
+          label: "Vertical Padding",
+          component: "number",
+        },
+        {
+          name: "xPadding",
+          label: "Horizontal Padding",
+          component: "number",
+        },
+      ],
+    },
+    {
+      name: "file",
+      label: "Image name",
+      component: "text",
+    },
+    {
+      name: "size",
+      label: "Size (Width)",
+      description: "Max size: 100",
+      component: "number",
+    },
+    {
+      name: "alt",
+      label: "Alt Text",
+      description: "Describe the image for SEO and screenreaders",
+      component: "text",
+    },
+    {
+      name: "shadow",
+      label: "Drop Shadow",
+      component: "toggle",
+    },
+  ],
+}
 
-export const videoRow = {}
+export const videoRow = {
+  label: "Video",
+  key: "video-row",
+  defaultItem: {
+    settings: "",
+  },
+  fields: [
+    {
+      label: "Row Settings",
+      name: "settings",
+      component: "group",
+      fields: [
+        {
+          name: "bgColor",
+          label: "Background Color",
+          component: "select",
+          options: ["primary", "secondary"],
+        },
+        {
+          name: "bgImage",
+          label: "Background Image",
+          description: "This overrides the background color if both are defined",
+          component: "text",
+        },
+        {
+          name: "fullWidth",
+          label: "Full width?",
+          component: "toggle",
+        },
+        {
+          name: "yPadding",
+          label: "Vertical Padding",
+          component: "number",
+        },
+        {
+          name: "xPadding",
+          label: "Horizontal Padding",
+          component: "number",
+        },
+      ],
+    },
+    {
+      name: "videoId",
+      label: "YouTube Video ID",
+      component: "text",
+    },
+    {
+      name: "size",
+      label: "Size (Width)",
+      description: "Max size: 100",
+      component: "number",
+    },
+    {
+      name: "shadow",
+      label: "Drop Shadow",
+      component: "toggle",
+    },
+  ],
+}
 
-export const formRow = {}
+export const formRow = {
+  label: "Form",
+  key: "form-row",
+  fields: [
+    {
+      label: "Row Settings",
+      name: "settings",
+      component: "group",
+      fields: [
+        {
+          name: "bgColor",
+          label: "Background Color",
+          component: "select",
+          options: ["primary", "secondary"],
+        },
+        {
+          name: "bgImage",
+          label: "Background Image",
+          description: "This overrides the background color if both are defined",
+          component: "text",
+        },
+        {
+          name: "fullWidth",
+          label: "Full width?",
+          component: "toggle",
+        },
+        {
+          name: "yPadding",
+          label: "Vertical Padding",
+          component: "number",
+        },
+        {
+          name: "xPadding",
+          label: "Horizontal Padding",
+          component: "number",
+        },
+      ],
+    },
+    {
+      name: "size",
+      label: "Width",
+      description: "Max width: 100",
+      component: "number",
+    },
+    {
+      name: "bgColor",
+      label: "Background Color",
+      component: "select",
+      options: [],
+    },
+    {
+      name: "borderRadius",
+      label: "Corner Radius",
+      component: "number",
+    },
+  ],
+}
 
-export const ctaRow = {}
+export const ctaRow = {
+  label: "Image and Text",
+  key: "cta",
+  fields: [
+    {
+      label: "Row Settings",
+      name: "settings",
+      component: "group",
+      fields: [
+        {
+          name: "bgColor",
+          label: "Background Color",
+          component: "select",
+          options: ["primary", "secondary"],
+        },
+        {
+          name: "bgImage",
+          label: "Background Image",
+          description: "This overrides the background color if both are defined",
+          component: "text",
+        },
+        {
+          name: "fullWidth",
+          label: "Full width?",
+          component: "toggle",
+        },
+        {
+          name: "yPadding",
+          label: "Vertical Padding",
+          component: "number",
+        },
+        {
+          name: "xPadding",
+          label: "Horizontal Padding",
+          component: "number",
+        },
+      ],
+    },
+    {
+      label: "Sizing Ratio",
+      name: "ratio",
+      component: "select",
+      options: ["1:1", "1:2", "2:1", "2:3", "3:2"],
+    },
+    {
+      label: "Image",
+      name: "image",
+      component: "text",
+    },
+    {
+      label: "Alt Text",
+      name: "alt",
+      component: "text",
+      description: "Describe the image for SEO and screen readers",
+    },
+    {
+      label: "Image on right?",
+      name: "imageRight",
+      component: "toggle",
+    },
+    {
+      label: "Content",
+      name: "content",
+      component: "markdown",
+    },
+    {
+      name: "button",
+      label: "Show button?",
+      component: "toggle",
+    },
+    {
+      name: "buttonLabel",
+      label: "Button Text",
+      component: "text",
+    },
+    {
+      name: "buttonTarget",
+      label: "Button Link",
+      component: "text",
+    },
+    {
+      name: "buttonTheme",
+      label: "Light or Dark Button?",
+      component: "toggle",
+    },
+  ],
+}
+
+export const contentRow = {
+  label: "Content",
+  key: "content-row",
+  fields: [
+    {
+      label: "Row Settings",
+      name: "settings",
+      component: "group",
+      fields: [
+        {
+          name: "bgColor",
+          label: "Background Color",
+          component: "select",
+          options: ["primary", "secondary"],
+        },
+        {
+          name: "bgImage",
+          label: "Background Image",
+          description: "This overrides the background color if both are defined",
+          component: "text",
+        },
+        {
+          name: "fullWidth",
+          label: "Full width?",
+          component: "toggle",
+        },
+        {
+          name: "yPadding",
+          label: "Vertical Padding",
+          component: "number",
+        },
+        {
+          name: "xPadding",
+          label: "Horizontal Padding",
+          component: "number",
+        },
+      ],
+    },
+    {
+      name: "content",
+      label: "Content",
+      components: "markdown",
+    },
+  ],
+}
+
+export const htmlRow = {
+  label: "Code",
+  key: "html-row",
+  fields: [
+    {
+      label: "HTML",
+      name: "htmlCode",
+      component: "html",
+    },
+  ],
+}

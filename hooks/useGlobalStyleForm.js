@@ -27,6 +27,11 @@ const useGlobalStyleForm = (styleFile, preview) => {
         component: "text",
       },
       {
+        label: "Google Tag Manager ID",
+        name: "gtm",
+        component: "text",
+      },
+      {
         label: "Colors",
         name: "colors",
         component: "group",
@@ -59,7 +64,41 @@ const useGlobalStyleForm = (styleFile, preview) => {
       },
       {
         name: "fonts.body",
+        label: "Body Fonts",
         component: "text",
+      },
+      {
+        name: "fonts.head",
+        label: "Heading Fonts",
+        component: "text",
+      },
+      {
+        name: "header",
+        label: "Header Settings",
+        component: "group",
+        fields: [
+          {
+            name: "show",
+            label: "Show header?",
+            component: "toggle",
+          },
+          {
+            name: "height",
+            label: "Height",
+            component: "number",
+          },
+          {
+            name: "color",
+            label: "Color",
+            component: "select",
+            options: [],
+          },
+          {
+            name: "textColor",
+            label: "Light or Dark text?",
+            component: "toggle",
+          },
+        ],
       },
     ],
   }
