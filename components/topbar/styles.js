@@ -2,7 +2,8 @@ import styled, { css } from "styled-components"
 
 export const TopBarStyled = styled.header`
   background-color: ${({ theme }) => theme.colors.primary};
-  padding: 0 24px;
+  height: ${({ theme }) => theme.header.height};
+  padding: 0.5rem 24px;
   justify-content: space-between;
   position: relative;
   @media all and (min-width: 1024px) {
@@ -11,7 +12,7 @@ export const TopBarStyled = styled.header`
 `
 
 export const LogoWrapperStyled = styled.div`
-  height: 80px;
+  max-height: ${({ theme }) => theme.header.height}rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
