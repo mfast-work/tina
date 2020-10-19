@@ -12,7 +12,6 @@ export const TopBarStyled = styled.header`
 `
 
 export const LogoWrapperStyled = styled.div`
-  max-height: ${({ theme }) => theme.header.height}rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +26,7 @@ export const LogoWrapperStyled = styled.div`
 
 export const LogoImg = styled.img`
   max-width: 161px;
+  max-height: ${({ theme }) => theme.header.height}rem;
 `
 
 export const IconButton = styled.button`

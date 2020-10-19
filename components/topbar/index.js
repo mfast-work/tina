@@ -36,16 +36,6 @@ const TopBar = ({ showDocsSearcher, theme, searchIndex, searchText }) => {
             <LogoImg alt={theme.siteName} src={`/${theme.logo}`} />
           </a>
         </Link>
-        <div>
-          {showDocsSearcher && (
-            <IconButton onClick={handleToggleSearchInput}>
-              <i className="icon-search" />
-            </IconButton>
-          )}
-          <IconButton onClick={handleToggleMobileMenu}>
-            {!showMobileMenu ? <i className="icon-menu_icon" /> : <i className="icon-close" />}
-          </IconButton>
-        </div>
       </LogoWrapperStyled>
       {showDocsSearcher && (
         <SearchWrapperStyled active={showMobileSearch}>
