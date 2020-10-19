@@ -10,5 +10,19 @@
     "contentAlign": "left",
     "imgAlign": "right",
     "bgColor": ""
+  },
+  "rawJson": {
+    "hero": {
+      "showHero": true,
+      "hero": {
+        "heading": "Modify this page to your needs",
+        "content": "This page is entirely editable and customizable. Make it the landing page you need for your project. ",
+        "imageBg": false,
+        "imageAlign": "Right",
+        "cta": "Sample",
+        "ctaTarget": "#",
+        "image": "images/download.jpeg"
+      }
+    }
   }
 }
