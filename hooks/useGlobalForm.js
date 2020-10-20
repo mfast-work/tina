@@ -1,7 +1,7 @@
 import { useGithubJsonForm } from "react-tinacms-github"
 import { useFormScreenPlugin } from "tinacms"
 
-const useGlobalForm = (formFile, preview) => {
+export const useGlobalForm = (formFile, preview) => {
   if (!preview) {
     // if we are not in preview return the jsonfile and dont register the form
     return [formFile.data, null]
