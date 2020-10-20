@@ -5,7 +5,7 @@
   "fonts": {
     "body": "Mulish, system-ui, sans-serif",
     "monospace": "Roboto Mono, monospace",
-    "head": "Mulish, system-ui, sans-serif"
+    "head": "Roboto, system-ui, sans-serif"
   },
   "fontWeights": {
     "body": 400,
