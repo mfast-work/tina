@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { bool } from "prop-types"
 import Link from "next/link"
 
 import GitHubLogo from "../../public/icons/github.svg"
@@ -36,6 +35,11 @@ const TopBar = ({ showDocsSearcher, theme, searchIndex, searchText }) => {
             <LogoImg alt={theme.siteName} src={`/${theme.logo}`} />
           </a>
         </Link>
+        <div>
+          <IconButton onClick={handleToggleMobileMenu}>
+            {!showMobileMenu ? <i className="icon-menu_icon" /> : <i className="icon-close" />}
+          </IconButton>
+        </div>
       </LogoWrapperStyled>
       {showDocsSearcher && (
         <SearchWrapperStyled active={showMobileSearch}>
@@ -76,10 +80,6 @@ const TopBar = ({ showDocsSearcher, theme, searchIndex, searchText }) => {
       </NavWrapperStyled>
     </TopBarStyled>
   )
-}
-
-TopBar.propTypes = {
-  showDocsSearcher: bool,
 }
 
 export default TopBar

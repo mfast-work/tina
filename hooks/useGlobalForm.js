@@ -1,14 +1,14 @@
 import { useGithubJsonForm } from "react-tinacms-github"
 import { useFormScreenPlugin } from "tinacms"
 
-const useGlobalStyleForm = (styleFile, preview) => {
+const useGlobalForm = (formFile, preview) => {
   if (!preview) {
     // if we are not in preview return the jsonfile and dont register the form
-    return [styleFile.data, null]
+    return [formFile.data, null]
   }
 
-  const styleFormOptions = {
-    label: "Theme",
+  const globalFormOptions = {
+    label: "Form",
     layout: "fullscreen",
     fields: [
       {
@@ -363,9 +363,9 @@ const useGlobalStyleForm = (styleFile, preview) => {
     ],
   }
 
-  const [styleData, styleForm] = useGithubJsonForm(styleFile, styleFormOptions)
+  const [globalFormData, globalForm] = useGithubJsonForm(formFile, globalFormOptions)
 
-  useFormScreenPlugin(styleForm)
-  return [styleData, styleForm]
+  useFormScreenPlugin(globalForm)
+  return [globalFormData, globalForm]
 }
-export default useGlobalStyleForm
+export default useGlobalForm

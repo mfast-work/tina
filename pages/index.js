@@ -21,7 +21,7 @@ import {
   contentRow,
 } from "../tina/blocks"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
-import { useGlobalStyleForm } from "@hooks"
+import { useGlobalStyleForm, useGlobalForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
   const formOptions = {
@@ -106,6 +106,7 @@ const Page = ({ file, preview, styleFile }) => {
   usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
 
   const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
+  const [globalFormData, globalForm] = useGlobalForm(formFile, preview)
 
   return (
     <Layout form={form} theme={styleData}>
