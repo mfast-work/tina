@@ -1,5 +1,13 @@
 import { useGithubJsonForm } from "react-tinacms-github"
 import { useFormScreenPlugin } from "tinacms"
+import {
+  textArea,
+  textField,
+  checkBoxes,
+  consent,
+  radioField,
+  selectField,
+} from "../tina/formTemplates"
 
 const useGlobalStyleForm = (styleFile, preview) => {
   if (!preview) {
@@ -25,6 +33,19 @@ const useGlobalStyleForm = (styleFile, preview) => {
         label: "Description",
         name: "description",
         component: "text",
+      },
+      {
+        label: "Form",
+        name: "form",
+        component: "blocks",
+        templates: {
+          "text-field": textField,
+          "text-area": textArea,
+          select: selectField,
+          radio: radioField,
+          checkboxes: checkBoxes,
+          consent: consent,
+        },
       },
       {
         name: "header",
