@@ -34,19 +34,7 @@ const useGlobalStyleForm = (styleFile, preview) => {
         name: "description",
         component: "text",
       },
-      {
-        label: "Form",
-        name: "form",
-        component: "blocks",
-        templates: {
-          "text-field": textField,
-          "text-area": textArea,
-          select: selectField,
-          radio: radioField,
-          checkboxes: checkBoxes,
-          consent: consent,
-        },
-      },
+
       {
         name: "header",
         label: "Header Settings",
@@ -380,6 +368,19 @@ const useGlobalStyleForm = (styleFile, preview) => {
         name: "fonts.head",
         label: "Heading Fonts",
         component: "text",
+      },
+      {
+        label: "Form",
+        name: "form",
+        component: "blocks",
+        templates: {
+          "text-field": textField,
+          "text-area": textArea,
+          select: selectField,
+          radio: radioField,
+          checkboxes: checkBoxes,
+          consent: consent,
+        },
       },
     ],
   }
