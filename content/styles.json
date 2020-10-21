@@ -33,7 +33,9 @@
   },
   "footer": {
     "privacy": "#",
-    "cslb": "1234"
+    "cslb": "1234",
+    "terms": "#",
+    "disclaimer": "<p></p>"
   },
   "navigation": {
     "headingLinks": [
