@@ -106,7 +106,6 @@ const Page = ({ file, preview, styleFile }) => {
   usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
 
   const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
-  //const [globalFormData, globalForm] = useGlobalForm(formFile, preview)
 
   return (
     <Layout form={form} theme={styleData}>

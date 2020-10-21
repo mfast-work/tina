@@ -3,29 +3,23 @@ import Link from "next/link"
 
 import GitHubLogo from "../../public/icons/github.svg"
 
-import Search from "@components/search"
-
-// import { theme } from "@utils"
+import { theme } from "@utils"
 
 import {
   TopBarStyled,
   LogoWrapperStyled,
-  SearchWrapperStyled,
   NavWrapperStyled,
   NavBarLink,
   LogoImg,
   IconButton,
 } from "./styles"
 
-const TopBar = ({ showDocsSearcher, theme, searchIndex, searchText }) => {
+const TopBar = ({ theme }) => {
   /* States */
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showMobileSearch, setShowMobileSearch] = useState(false)
 
   /* Methods */
   const handleToggleMobileMenu = () => setShowMobileMenu(!showMobileMenu)
-
-  const handleToggleSearchInput = () => setShowMobileSearch(!showMobileSearch)
 
   return (
     <TopBarStyled>
@@ -41,18 +35,6 @@ const TopBar = ({ showDocsSearcher, theme, searchIndex, searchText }) => {
           </IconButton>
         </div>
       </LogoWrapperStyled>
-      {showDocsSearcher && (
-        <SearchWrapperStyled active={showMobileSearch}>
-          <div>
-            <Search
-              handleToggleSearchInput={handleToggleSearchInput}
-              showMobileSearch={showMobileSearch}
-              searchIndex={searchIndex}
-              searchText={searchText}
-            />
-          </div>
-        </SearchWrapperStyled>
-      )}
       <NavWrapperStyled showMobileMenu={showMobileMenu}>
         <Link href="/blog" passHref>
           <NavBarLink>Blog</NavBarLink>

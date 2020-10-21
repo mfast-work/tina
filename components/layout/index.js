@@ -7,14 +7,13 @@ import Footer from "@components/footer"
 
 import { LayoutStyled, LayoutBodyStyled } from "./styles"
 
-const Layout = ({ children, showDocsSearcher, splitView, theme, searchIndex, searchText }) => {
+const Layout = ({ children, splitView, theme, searchIndex, searchText }) => {
   useGithubToolbarPlugins()
   return (
     // if the theme isnt avaible load it from the file system
     <ThemeProvider theme={theme || require("../../content/styles.json")}>
       <LayoutStyled>
         <TopBar
-          showDocsSearcher={showDocsSearcher}
           theme={theme || require("../../content/styles.json")}
           searchIndex={searchIndex}
           searchText={searchText}

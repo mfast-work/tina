@@ -83,7 +83,7 @@ const useGlobalStyleForm = (styleFile, preview) => {
           {
             name: "disclaimer",
             label: "Disclaimer Code",
-            component: "html",
+            component: "textarea",
           },
           {
             name: "cslb",
