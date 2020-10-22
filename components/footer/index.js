@@ -1,15 +1,14 @@
 import { FooterWrapper, FooterLink, EditWithTinaButton } from "./styles"
 import { useCMS } from "tinacms"
-import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 
-const Footer = ({ preview }) => {
+const Footer = ({ preview, privacy, terms, divider, cslb, disclaimer }) => {
   return (
     <FooterWrapper>
       <div>
         <section className="linksWrapper">
-          <privacyPolicy />
+          {privacy ? <FooterLink href={privacy}>Privacy Policy</FooterLink> : null}
+          {divider || "|"}
         </section>
-
         <EditLink />
       </div>
     </FooterWrapper>
@@ -25,11 +24,6 @@ export const EditLink = () => {
   )
 }
 
-export const privacyPolicy = () => {
-  if (data.footer.privacy) {
-  }
-}
-
 export const getStaticProps = async function ({ preview, previewData }) {
   const global = await getGlobalStaticProps(preview, previewData)
 
@@ -38,7 +32,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
     const file = (
       await getGithubPreviewProps({
         ...previewData,
-        fileRelativePath: "content/home.json",
+        fileRelativePath: "content/styles.json",
         parse: parseJson,
       })
     ).props
@@ -57,8 +51,8 @@ export const getStaticProps = async function ({ preview, previewData }) {
       error: null,
       preview: false,
       file: {
-        fileRelativePath: "content/home.json",
-        data: (await import("../../content/home.json")).default,
+        fileRelativePath: "content/styles.json",
+        data: (await import("../../content/styles.json")).default,
       },
       ...global,
     },

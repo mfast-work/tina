@@ -2,7 +2,7 @@
 import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { HtmlFieldPlugin, MarkdownFieldPlugin } from "react-tinacms-editor"
-
+import Footer from "@components/footer"
 import Head from "@components/head"
 import Layout from "@components/layout"
 import Container from "@components/container"
@@ -111,7 +111,7 @@ const Page = ({ file, preview, styleFile }) => {
     <Layout form={form} theme={styleData}>
       <Head title="Home" />
       <Container className="container">
-        <Title className="title">{data.title}</Title>
+        <Title className="title">{data.hero.heading}</Title>
         <p className="description">{data.subheading}</p>
       </Container>
     </Layout>
