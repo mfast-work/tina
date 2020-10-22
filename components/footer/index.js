@@ -7,7 +7,9 @@ const Footer = ({ preview, privacy, terms, divider, cslb, disclaimer }) => {
       <div>
         <section className="linksWrapper">
           {privacy ? <FooterLink href={privacy}>Privacy Policy</FooterLink> : null}
-          {divider || "|"}
+          {privacy ? divider || "|" : null}
+          {terms ? <FooterLink href={terms}>Terms & Conditions</FooterLink> : null}
+          {terms ? divider || "|" : null}
         </section>
         <EditLink />
       </div>

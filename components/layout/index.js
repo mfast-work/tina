@@ -15,7 +15,11 @@ const Layout = ({ children, splitView, theme }) => {
       <LayoutStyled>
         <TopBar theme={theme || require("../../content/styles.json")} />
         <LayoutBodyStyled splitView={splitView}>{children}</LayoutBodyStyled>
-        <Footer privacy={theme.footer.privacy} divider={theme.footer.divider} />
+        <Footer
+          privacy={theme.footer.privacy}
+          terms={theme.footer.terms}
+          divider={theme.footer.divider}
+        />
       </LayoutStyled>
     </ThemeProvider>
   )
