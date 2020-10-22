@@ -32,7 +32,8 @@ export const FooterLink = styled.a`
   color: #333300;
   @media all and (min-width: 768px) {
     margin-bottom: 0;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   &:hover {
     text-decoration: underline;

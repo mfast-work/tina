@@ -6,6 +6,7 @@ import TopBar from "@components/topbar"
 import Footer from "@components/footer"
 
 import { LayoutStyled, LayoutBodyStyled } from "./styles"
+import { parseJson } from "next-tinacms-github"
 
 const Layout = ({ children, splitView, theme }) => {
   useGithubToolbarPlugins()
@@ -18,7 +19,9 @@ const Layout = ({ children, splitView, theme }) => {
         <Footer
           privacy={theme.footer.privacy}
           terms={theme.footer.terms}
+          cslb={theme.footer.cslb}
           divider={theme.footer.divider}
+          disclaimer={theme.footer.disclaimer}
         />
       </LayoutStyled>
     </ThemeProvider>

@@ -1,19 +1,28 @@
 import { FooterWrapper, FooterLink, EditWithTinaButton } from "./styles"
 import { useCMS } from "tinacms"
+import { parseJson } from "next-tinacms-github"
 
 const Footer = ({ preview, privacy, terms, divider, cslb, disclaimer }) => {
   return (
-    <FooterWrapper>
-      <div>
-        <section className="linksWrapper">
-          {privacy ? <FooterLink href={privacy}>Privacy Policy</FooterLink> : null}
-          {privacy ? divider || "|" : null}
-          {terms ? <FooterLink href={terms}>Terms & Conditions</FooterLink> : null}
-          {terms ? divider || "|" : null}
-        </section>
-        <EditLink />
-      </div>
-    </FooterWrapper>
+    <div>
+      <FooterWrapper>
+        <div>
+          <section className="linksWrapper">
+            {privacy ? <FooterLink href={privacy}>Privacy Policy</FooterLink> : null}
+            {privacy && (terms || cslb) ? divider || "|" : null}
+            {terms ? <FooterLink href={terms}>Terms & Conditions</FooterLink> : null}
+            {terms && cslb ? divider || "|" : null}
+            {cslb ? (
+              <FooterLink href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx">
+                CSLB# {cslb}
+              </FooterLink>
+            ) : null}
+          </section>
+          <EditLink />
+        </div>
+      </FooterWrapper>
+      <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
+    </div>
   )
 }
 export const EditLink = () => {
