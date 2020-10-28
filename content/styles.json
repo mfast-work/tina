@@ -68,5 +68,9 @@
     ]
   },
   "gtm": "",
-  "fontsBody": "Mulish, system-ui, sans-serif"
+  "fontsBody": "Mulish, system-ui, sans-serif",
+  "buttonStyles": {
+    "padding": 1,
+    "fontSize": 1
+  }
 }
